@@ -1,13 +1,14 @@
 import { Text, View } from 'react-native';
 
-import { StatusBar } from 'expo-status-bar';
+import { Header } from './components';
+import { StartGame } from './screens';
 import { styles } from './styles';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Hola</Text>
-      <StatusBar style="auto" />
+      <Header title='Adivina el número'/>
+      <StartGame />
     </View>
   );
 }
