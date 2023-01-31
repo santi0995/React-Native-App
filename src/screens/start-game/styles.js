@@ -14,7 +14,8 @@ export const styles = StyleSheet.create({
     inputContainer:{
         justifyContent: 'center',
         alignItems: 'center',
-        marginHorizontal: 20
+        marginHorizontal: 20,
+        paddingVertical:20
     },
     label:{
         fontSize: 15,
