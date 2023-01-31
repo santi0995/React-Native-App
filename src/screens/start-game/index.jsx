@@ -1,11 +1,11 @@
 import { Alert, Button, Keyboard, Text, TextInput, TouchableWithoutFeedback, View } from "react-native";
+import { Card, NumberContainer } from "../../components";
 import React, {useState} from "react";
 
-import { Card } from "../../components";
 import {colors} from '../../constants'
 import { styles } from "./styles";
 
-export const StartGame = () =>{
+export const StartGame = ({onHandlerStarGame}) =>{
 
     const [enteredValue, setEnteredValue] = useState("");
     const [confirmed, setConfirmed] = useState(false);
@@ -31,9 +31,18 @@ export const StartGame = () =>{
         }
     }
 
-    const Confirmed = () => confirmed ? (
-        <Card>
+    const onHandlerStartGame = () =>{
+        onHandlerStarGame(selectedNumber);
+    }
 
+    const Confirmed = () => confirmed ? (
+        <Card style={styles.confirmedContainer}>
+            <Text style={styles.confirmedTitle}>Número seleccionado</Text>
+            <NumberContainer number={selectedNumber}/>
+            <Button 
+            title='Iniciar juego'
+            onPress={onHandlerStartGame}
+            color={colors.background}/>
         </Card>
     ) : null;
 
