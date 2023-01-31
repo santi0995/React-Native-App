@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         width: '100%',
         borderBottomColor: colors.text,
         borderBottomWidth: 1,
-        minWidth: 70,
+        minWidth: 50,
         fontSize: 22,
         paddingVertical: 10,
         textAlign: 'center',
