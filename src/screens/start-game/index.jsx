@@ -2,6 +2,7 @@ import { Alert, Button, Keyboard, Text, TextInput, TouchableWithoutFeedback, Vie
 import { Card, NumberContainer } from "../../components";
 import React, {useState} from "react";
 
+import { Header } from "react-native/Libraries/NewAppScreen";
 import {colors} from '../../constants'
 import { styles } from "./styles";
 
